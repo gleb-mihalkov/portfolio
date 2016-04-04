@@ -11,6 +11,11 @@ var coffee = require("gulp-coffee");
 var replace = require("gulp-replace");
 var exec = require("child_process").exec;
 var prefixer = require("gulp-autoprefixer");
+var gutil = require("gulp-util");
+var minCss = require("gulp-clean-css");
+var uglify = require("gulp-uglify");
+var base64 = require("gulp-css-base64");
+var cssImport = require("gulp-cssimport");
 
 var srcPath = "./src";
 var dstPath = "./www";
@@ -101,6 +106,20 @@ function _prefixer() {
   return prefixer();
 }
 
+function _minCss() {
+  if (gutil.env.compress == null) return gutil.noop();
+  var s1 = cssImport();
+  var s2 = minCss();
+  s1.pipe(s2);
+  return s1;
+}
+
+function _minJs() {
+  if (gutil.env.compress == null) return gutil.noop();
+  var s1 = uglify();
+  return s1;
+}
+
 process.on("uncaughtException", _error());
 
 gulp.task("build:css", function(cb) {
@@ -108,14 +127,14 @@ gulp.task("build:css", function(cb) {
     .pipe(sass())
     .pipe(include())
     .pipe(_prefixer())
+    .pipe(_minCss())
     .pipe(_dst("styles.css", cb));
 });
 
 gulp.task("build:js", function(cb) {
   _src("./main.js", cb)
-    // .pipe(include())
-    // .pipe(coffee({bare: true}))
     .pipe(include())
+    .pipe(_minJs())
     .pipe(_dst("scripts.js", cb));
 });
 
