@@ -1,0 +1,59 @@
+.screen
+  position: absolute
+  left: 50%
+  top: 50%
+  margin-top: -$screen__height * 0.5 !important
+  margin-left: -$screen__width * 0.5 !important
+  height: $screen__height
+  width: $screen__width
+  perspective: 900px
+
+  &__link,
+  &__main
+    position: absolute
+
+  &__main
+    z-index: 100
+    left: 50%
+    top: 50%
+
+  &__link
+    display: block
+    height: $screen__offset--vert
+    width: $screen__offset--horz
+    z-index: 200
+
+    &--top-right,
+    &--top-left
+      top: 0
+
+    &--bottom-right,
+    &--bottom-left
+      bottom: 0
+
+    &--bottom-left,
+    &--top-left
+      left: 0
+
+    &--bottom-right,
+    &--top-right
+      right: 0
+  
+    &--active .link,
+    &:hover .link,
+      color: $color__white
+
+      &:before
+        border-color: $color__red
+
+      &:after
+        transform: scale(1)
+
+    &--active
+      cursor: default
+
+  &__nav
+    opacity: 0.75
+
+    &--disabled
+      animation: fade 1s linear forwards

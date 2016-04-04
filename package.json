@@ -1,0 +1,35 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio.",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gleb-mihalkov/tmp0862.git"
+  },
+  "author": "gleb-mihalkov",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.11.1",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-coffee": "^2.3.1",
+    "gulp-include": "^2.1.0",
+    "gulp-notify": "^2.2.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-replace": "^0.5.4",
+    "gulp-sass": "^2.2.0",
+    "gulp-watch": "^4.3.5",
+    "pretty-error": "^2.0.0"
+  },
+  "dependencies": {},
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/gleb-mihalkov/tmp0862/issues"
+  },
+  "homepage": "https://github.com/gleb-mihalkov/tmp0862#readme"
+}

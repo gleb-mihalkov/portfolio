@@ -1,0 +1,48 @@
+.card
+  height: $card__height
+  width: $card__width
+  margin-left: -$card__width * 0.5 !important
+  margin-top: -$card__height * 0.5 !important
+  transform-style: preserve-3d
+
+  &__frontface,
+  &__backface,
+  &__link
+    transform: rotateX(0deg)
+    position: absolute
+
+  &__frontface,
+  &__backface
+    backface-visibility: hidden
+    top: 0
+    height: 100%
+    width: 100%
+    box-shadow: $card__shadow
+    background: url(./img/card-bg.jpg) no-repeat center center
+    background-size: cover
+    border-radius: 4px
+
+  &__frontface
+    z-index: 120
+
+  &__backface
+    transform: rotateX(180deg)
+    z-index: 110
+
+  &--flip-bottom
+    animation: flip--bottom 1s linear forwards
+
+  &--flip-top
+    animation: flip--top 1s linear forwards
+
+  &--flip-bottom-right
+    animation: flip--bottom-right 1s linear forwards
+
+  &--flip-bottom-left
+    animation: flip--bottom-left 1s linear forwards
+    
+  &--flip-top-right
+    animation: flip--top-right 1s linear forwards
+
+  &--flip-top-left
+    animation: flip--top-left 1s linear forwards

@@ -1,0 +1,96 @@
+.link
+  $link__height: $text__size--sans * 1.25 * 1.5
+  $link__width: $block__width * 1.75
+
+  position: absolute
+  text-transform: uppercase
+  text-decoration: none
+  font-size: $text__size--sans * 1.25
+  font-family: $font__sans
+  color: fade-out($color__white, 0.5)
+  line-height: 1.5
+  display: block
+  width: $link__width
+  transition: color .5s
+
+  &, &:before
+    border-color: fade-out($color__grey, 0.5)
+    border-width: 1px
+
+  &:before,
+  &:after
+    border-top-style: solid
+    position: absolute
+    display: block
+    height: 1px
+    content: ""
+
+  &:before
+    transition: border-color .5s
+    transform-origin: 0 0
+    width: 30px
+
+  &:after
+    width: $link__width
+    border-top: 1px solid $color__red
+    transition: transform .5s
+    transform: scale(0)
+
+  &--top-right,
+  &--top-left
+    border-bottom-style: solid
+    top: 0
+
+    &:before
+      top: $link__height
+
+    &:after
+      bottom: -1px
+
+  &--bottom-right,
+  &--bottom-left
+    border-top-style: solid
+    bottom: 0
+
+    &:before
+      top: -1px
+
+    &:after
+      top: -1px
+
+  &--bottom-left,
+  &--top-left
+    text-align: left
+    left: 0
+
+    &:before
+      left: $link__width
+
+    &:after
+      transform-origin: 100% 0
+
+  &--bottom-right,
+  &--top-right
+    text-align: right
+    right: 0
+
+    &:before
+      left: 0
+
+    &:after
+      transform-origin: 0 0
+
+  $angle__right: 126deg
+  $angle__left: 53deg
+
+  &--top-left:before
+    transform: rotate($angle__left)
+
+  &--top-right:before
+    transform: rotate($angle__right)
+
+  &--bottom-left:before
+    transform: rotate(-$angle__left)
+
+  &--bottom-right:before
+    transform: rotate(-$angle__right)

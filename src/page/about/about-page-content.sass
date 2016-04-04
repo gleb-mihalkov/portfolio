@@ -1,0 +1,27 @@
+.about-page-content
+
+  &__inner
+    position: absolute
+    top: 50%
+    width: 100%
+    transition: opacity 0.5s ease
+    visibility: hidden
+    opacity: 0
+    text-align: center
+
+    &--active
+      visibility: visible
+      opacity: 1
+
+    &--experience,
+    &--education,
+    &--perspectives,
+    &--other
+      margin-top: -102px * 0.5 !important
+
+    &--frontend,
+    &--backend
+      margin-top: -132px * 0.5 !important
+
+  &__secret
+    color: transparent

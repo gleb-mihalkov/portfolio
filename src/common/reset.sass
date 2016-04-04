@@ -1,0 +1,47 @@
+*
+  &, &:before, &:after
+    box-sizing: border-box
+
+  &:focus
+    outline: none
+
+  &:first-child
+    margin-top: 0 !important
+
+  &:last-child
+    margin-bottom: 0 !important
+
+html, body
+  height: 100%
+  width: 100%
+  margin: 0
+  padding: 0
+
+body
+  font-family: $font__serif
+  font-size: $text__size
+  line-height: 1.25
+  color: $color__black
+  position: relative
+  background: url(./img/body-bg.jpg) no-repeat center center
+  background-size: cover
+  min-width: 980px
+
+p, ul, ol, table, form, h3, h4, h5, h6
+  margin: $text__offset--small 0
+
+h1, h2
+  font-size: $text__size--large
+  margin: $text__offset 0
+
+a
+  text-decoration: none
+  transition: color .25s
+  color: $color__blue
+
+  &:hover
+    color: $color__blue--light
+
+ul
+  padding-left: $block__width * 0.5
+    

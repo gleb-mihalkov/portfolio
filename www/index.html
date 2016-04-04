@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="screen">
+    <div class="screen__main | card">
+      <div class="card__frontface"></div>
+      <div class="card__backface"></div>
+    </div>
+    <nav class="screen__nav" role="navigation">
+      <a href="#/home" class="screen__link screen__link--top-left">
+        <span class="link link--top-left">Главная</span>
+      </a>
+      <a href="#/contacts" class="screen__link screen__link--top-right">
+        <span class="link link--top-right">Контакты</span>
+      </a>
+      <a href="#/about" class="screen__link screen__link--bottom-left">
+        <span class="link link--bottom-left">Обо мне</span>
+      </a>
+      <a href="#/projects" class="screen__link screen__link--bottom-right">
+        <span class="link link--bottom-right">Проекты</span>
+      </a>
+    </nav>
+  </div>
+  <script type='text/template' id='HomePage'>
+  <div class="static-page">
+    <div class="static-page__inner">
+      <h1>Глеб Михальков</h1>
+      <p class="static-page__text">веб-разработчик</p>
+    </div>
+  </div>
+  </script>
+  <script type='text/template' id='ContactsPage'>
+  <div class="static-page">
+    <div class="static-page__inner">
+      <h1>Контакты</h1>
+      <p class="static-page__text">
+        e-mail: <a href="mailto:gleb.mihalkov.work@yandex.ru">gleb.mihalkov.work@yandex.ru</a>
+      </p>
+      <p class="static-page__text">
+        телефон: <a href="tel:+79051051622">+7 (905) 105-16-22</a>
+      </p>
+    </div>
+  </div>
+  </script>
+  <script type='text/template' id='ErrorPage'>
+  <div class="static-page">
+    <div class="static-page__inner">
+      <h1>Ошибка 404</h1>
+      <p class="static-page__text">страница не найдена</p>
+    </div>
+  </div>
+  </script>
+  <script type='text/template' id='ProjectsPage'>
+  <div class="static-page">
+    <div class="static-page__inner">
+      <h1>Проекты</h1>
+      <p class="static-page__text">страница находится в стадии заполнения</p>
+    </div>
+  </div>
+  </script>
+  <script type='text/template' id='AboutPage'>
+    <div class="about-page">
+      <nav class="about-page__nav about-page__nav--top | about-page-nav" role="navigation">
+        <a href="#/about/education" class="about-page-nav__link about-page-nav__link--education">Образование</a>
+        <a href="#/about/experience" class="about-page-nav__link about-page-nav__link--experience">Опыт работы</a>
+        <a href="#/about/perspectives" class="about-page-nav__link about-page-nav__link--perspectives">Интересы</a>
+        <a href="#/about/backend" class="about-page-nav__link about-page-nav__link--backend">бэкенд</a>
+        <a href="#/about/frontend" class="about-page-nav__link about-page-nav__link--frontend">Фронтенд</a>
+        <a href="#/about/other" class="about-page-nav__link about-page-nav__link--other">Прочее</a>
+      </nav>
+      <div class="about-page__main | about-page-content">
+        <div class="about-page-content__inner about-page-content__inner--education">
+          <h2>Образование</h2>
+          <p>Ивановский Государственный Энергоуниверситет</p>
+          <p><strong>инженер-программист</strong></p>
+        </div>
+        <div class="about-page-content__inner about-page-content__inner--experience">
+          <h2>Опыт работы</h2>
+          <p>Фриланс: 4 года</p>
+          <p>ООО "ИТР": 3 года</p>
+        </div>
+        <div class="about-page-content__inner about-page-content__inner--perspectives">
+          <h2>Интересы</h2>
+          <p>разработка мобильных приложений</p>
+          <p>нестандартные дизайн-решения</p>
+        </div>
+        <div class="about-page-content__inner about-page-content__inner--backend">
+          <h2>Бэкенд</h2>
+          <p>
+            <strong>NodeJS</strong> (Express),
+            <strong>PHP</strong> (CodeIgniter, ZendFramework),
+            <strong>ASP.NET</strong> MVC 3+
+          </p>
+          <p>Apache, Ngnix, IIS Server</p>
+          <p>MySQL, MSSQL</p>
+        </div>
+        <div class="about-page-content__inner about-page-content__inner--frontend">
+          <h2>Фронтенд</h2>
+          <p><strong>JS:</strong> CoffeeScript, AngularJS, BackboneJS, RactiveJS, jQuery, VanilaJS</p>
+          <p><strong>HTML:</strong> Jade, Twig, Mustache, Smarty</p>
+          <p><strong>CSS:</strong> Sass, Stylus, Less, Bootstrap</p>
+        </div>
+        <div class="about-page-content__inner about-page-content__inner--other">
+          <h2>Прочее</h2>
+          <p>Photoshop, Git, SVN, Gulp, Grunt, Phonegap</p>
+          <p>C++, Lisp, Turbo Prolog</p>
+          <p><span class="about-page-content__secret">Whitespace</span></p>
+        </div>
+      </div>
+    </div>
+  </script>
+  <script src="scripts.js"></script>
+</body>
+</html>
